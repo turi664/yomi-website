@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Centro de Bienestar Familiar en Tijuana. Un equipo multidisciplinario dedicado a la salud emocional de niños, adolescentes y padres.">
-    <title>Centro de Bienestar Familiar YOMI Tijuana</title>
+    <meta name="description" content="YOMI Bienestar Familiar en Tijuana. Un equipo multidisciplinario dedicado a la salud emocional de niños, adolescentes y padres.">
+    <title>YOMI | Bienestar Familiar en Tijuana</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -28,9 +28,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         html { scroll-behavior: smooth; }
-        
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: var(--bg);
@@ -40,7 +38,6 @@
         }
 
         h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: var(--primary); line-height: 1.2; }
-        
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         
         .btn {
@@ -55,17 +52,28 @@
         .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
         .btn-outline:hover { background: var(--primary); color: var(--accent); transform: translateY(-3px); }
 
-        /* Header */
+        /* Header & Logo */
         header {
             background: var(--glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255,255,255,0.3);
-            position: sticky; top: 0; z-index: 1000; padding: 16px 0;
-            transition: all 0.3s;
+            position: sticky; top: 0; z-index: 1000; padding: 12px 0;
         }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-        .logo-icon { width: 32px; height: 32px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; }
         
+        .logo {
+            display: flex; flex-direction: column; align-items: flex-start;
+            text-decoration: none; line-height: 1.1;
+        }
+        .logo-main {
+            font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.8rem;
+            color: var(--primary); letter-spacing: 1.5px;
+        }
+        .logo-sub {
+            font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 0.7rem;
+            color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px;
+        }
+        .logo-sub span { color: var(--secondary); margin: 0 4px; }
+
         .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; position: relative; }
         .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--secondary); transition: width 0.3s; }
@@ -75,15 +83,13 @@
         .lang-toggle {
             background: var(--bg); border: 1px solid rgba(43,74,95,0.1); color: var(--primary);
             padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem;
-            transition: all 0.3s;
         }
-        .lang-toggle:hover { border-color: var(--secondary); }
         .crisis-btn {
             background: #fff5f5; color: #c53030; padding: 8px 16px; border-radius: 20px;
             text-decoration: none; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;
             border: 1px solid #fed7d7; transition: all 0.3s;
         }
-        .crisis-btn:hover { background: #fed7d7; transform: translateY(-1px); }
+        .crisis-btn:hover { background: #fed7d7; }
         .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
 
         /* Hero */
@@ -100,7 +106,7 @@
         
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
         .hero-content h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.02em; }
-        .hero-content h1 span { color: var(--secondary); position: relative; }
+        .hero-content h1 span { color: var(--secondary); }
         .hero-content p { font-size: 1.15rem; color: var(--text-light); margin-bottom: 32px; max-width: 520px; }
         .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
         
@@ -112,7 +118,6 @@
         .hero-image {
             border-radius: var(--radius); height: 500px; width: 100%;
             background: #ddd; overflow: hidden; box-shadow: var(--shadow-lg);
-            position: relative;
         }
         .hero-image img { width: 100%; height: 100%; object-fit: cover; }
         .hero-float-card {
@@ -172,7 +177,7 @@
             font-size: 0.85rem; color: var(--primary); font-weight: 600; display: flex; align-items: center; gap: 8px;
         }
 
-        /* Team Section (New) */
+        /* Team Section */
         .team { padding: 100px 0; background: var(--primary); color: var(--accent); position: relative; overflow: hidden; }
         .team::before { content: ''; position: absolute; top: 0; right: 0; width: 500px; height: 500px; background: var(--secondary); opacity: 0.1; border-radius: 50%; filter: blur(100px); }
         .team h2 { color: var(--accent); }
@@ -200,7 +205,6 @@
         .blog-card { background: var(--accent); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s; }
         .blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
         .blog-img { height: 220px; background: linear-gradient(135deg, var(--primary), var(--secondary)); position: relative; }
-        .blog-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3)); }
         .blog-content { padding: 28px; }
         .blog-content h3 { font-size: 1.25rem; margin-bottom: 12px; }
         .blog-content a { color: var(--secondary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.3s; }
@@ -248,7 +252,6 @@
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Scroll Animations */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -273,16 +276,16 @@
     <header>
         <div class="container nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon"><i class="fas fa-heart"></i></div>
-                Centro <span style="color: var(--secondary);">YOMI</span>
+                <div class="logo-main">YOMI</div>
+                <div class="logo-sub">Bienestar Familiar <span>|</span> Tijuana</div>
             </a>
             
             <button class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#services" data-i18n="nav_services">Servicios</a></li>
-                <li><a href="#team" data-i18n="nav_team">Nuestro Equipo</a></li>
-                <li><a href="#about" data-i18n="nav_about">Sobre Nosotros</a></li>
+                <li><a href="#team" data-i18n="nav_team">Equipo</a></li>
+                <li><a href="#about" data-i18n="nav_about">Nosotros</a></li>
                 <li><a href="#blog" data-i18n="nav_blog">Blog</a></li>
                 <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
             </ul>
@@ -300,7 +303,7 @@
         <div class="container hero-grid">
             <div class="hero-content reveal">
                 <h1 data-i18n="hero_title">Un espacio seguro para <span>toda tu familia</span> en Tijuana.</h1>
-                <p data-i18n="hero_subtitle">Somos un centro multidisciplinario dedicado al bienestar emocional de niños, adolescentes y padres. Entendemos el ritmo de la frontera. Aquí encontrarás soluciones prácticas, sin juicios y con total confidencialidad.</p>
+                <p data-i18n="hero_subtitle">Somos un equipo multidisciplinario dedicado al bienestar emocional de niños, adolescentes y padres. Entendemos el ritmo de la frontera. Aquí encontrarás soluciones prácticas, sin juicios y con total confidencialidad.</p>
                 <div class="hero-ctas">
                     <a href="#contact" class="btn btn-primary" data-i18n="hero_cta">Agendar Primera Sesión <i class="fas fa-arrow-right"></i></a>
                     <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">Conoce Nuestros Servicios</a>
@@ -314,8 +317,7 @@
             </div>
             <div class="hero-image-wrapper reveal">
                 <div class="hero-image">
-                    <!-- Replace src with your generated hero image -->
-                    <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&q=80&w=1000" alt="Familia diversa en centro de bienestar">
+                    <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&q=80&w=1000" alt="Familia diversa en YOMI">
                 </div>
                 <div class="hero-float-card">
                     <i class="fas fa-star"></i>
@@ -381,7 +383,7 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header reveal">
-                <h2 data-i18n="services_title">Nuestros Servicios</h2>
+                <h2 data-i18n="services_title">El Método YOMI®</h2>
                 <p data-i18n="services_subtitle">Un enfoque clínico, cálido y orientado a resultados tangibles para cada miembro de la familia.</p>
             </div>
             <div class="services-grid">
@@ -410,12 +412,11 @@
     <section id="team" class="team">
         <div class="container team-grid">
             <div class="team-image reveal">
-                <!-- Replace src with your generated team image -->
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000" alt="Equipo multidisciplinario del centro">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000" alt="Equipo multidisciplinario YOMI">
             </div>
             <div class="team-content reveal">
                 <h2 data-i18n="team_title">Un equipo completo para cada necesidad</h2>
-                <p data-i18n="team_p1">No estás solo/a. En nuestro centro, hemos reunido a un grupo selecto de colegas especializados para ofrecer atención integral. Desde psicólogos infantiles hasta orientadores familiares, todos compartimos la misma misión: el bienestar de tu hogar.</p>
+                <p data-i18n="team_p1">No estás solo/a. En YOMI, hemos reunido a un grupo selecto de colegas especializados para ofrecer atención integral. Desde psicólogos infantiles hasta orientadores familiares, todos compartimos la misma misión: el bienestar de tu hogar.</p>
                 <p data-i18n="team_p2">Trabajamos de la mano, compartiendo casos (con tu consentimiento) para asegurar que cada miembro de tu familia reciba el apoyo exacto que necesita.</p>
                 
                 <div class="team-stats">
@@ -439,12 +440,11 @@
     <section id="about" class="about">
         <div class="container about-grid">
             <div class="about-image reveal">
-                <!-- Replace src with your generated founder image -->
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000" alt="Dra. Fundadora del centro">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000" alt="Fundadora de YOMI">
             </div>
             <div class="about-text reveal">
                 <h2 data-i18n="about_title">Nuestra Misión: Romper el estigma, sanar familias</h2>
-                <p data-i18n="about_p1">Fundado por la Dra. Garcia, este centro nació de la necesidad de ofrecer un espacio donde las familias tijuanenses puedan recibir ayuda profesional sin sentirse juzgadas. Conocemos el tráfico de la garita, las largas jornadas y el miedo a "qué dirán los vecinos".</p>
+                <p data-i18n="about_p1">YOMI nació de la necesidad de ofrecer un espacio donde las familias tijuanenses puedan recibir ayuda profesional sin sentirse juzgadas. Conocemos el tráfico de la garita, las largas jornadas y el miedo a "qué dirán los vecinos".</p>
                 <p data-i18n="about_p2">Aquí no hay etiquetas. Solo ciencia, empatía y un equipo de profesionales comprometidos con que tu hijo/a duerma mejor, saque mejores calificaciones y tu casa vuelva a ser un lugar de paz.</p>
                 <a href="#contact" class="btn btn-primary" data-i18n="about_cta">Conoce nuestro enfoque</a>
             </div>
@@ -507,7 +507,7 @@
                     <div class="info-icon"><i class="fas fa-envelope"></i></div>
                     <div>
                         <strong>Email</strong>
-                        <span>contacto@centroyomi.com</span>
+                        <span>hola@yomi.com</span>
                     </div>
                 </div>
             </div>
@@ -542,13 +542,13 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <h4>Centro de Bienestar Familiar YOMI</h4>
+                    <h4>YOMI | Bienestar Familiar</h4>
                     <p data-i18n="footer_desc">Psicología clínica con calidez y evidencia científica para las familias de Tijuana. Un equipo, múltiples soluciones.</p>
                 </div>
                 <div>
                     <h4 data-i18n="footer_links">Enlaces</h4>
                     <a href="#services" data-i18n="nav_services">Servicios</a>
-                    <a href="#team" data-i18n="nav_team">Nuestro Equipo</a>
+                    <a href="#team" data-i18n="nav_team">Equipo</a>
                     <a href="#" data-i18n="footer_privacy">Aviso de Privacidad</a>
                 </div>
                 <div>
@@ -558,12 +558,12 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2024 Centro de Bienestar Familiar YOMI. <span data-i18n="footer_rights">Todos los derechos reservados.</span>
+                &copy; 2024 YOMI Bienestar Familiar. <span data-i18n="footer_rights">Todos los derechos reservados.</span>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/521664XXXXXXX?text=Hola%20Dra.%20Quiero%20ayudar%20a%20mi%20hijo/a%20con%20..." class="whatsapp-sticky" target="_blank" aria-label="Chat en WhatsApp">
+    <a href="https://wa.me/521664XXXXXXX?text=Hola%20YOMI.%20Quiero%20ayudar%20a%20mi%20hijo/a%20con%20..." class="whatsapp-sticky" target="_blank" aria-label="Chat en WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <div class="whatsapp-tooltip" data-i18n="wa_tooltip">¡Hola! ¿En qué podemos ayudarte?</div>
     </a>
@@ -571,10 +571,10 @@
     <script>
         const translations = {
             es: {
-                nav_services: "Servicios", nav_team: "Nuestro Equipo", nav_about: "Sobre Nosotros", nav_blog: "Blog", nav_contact: "Contacto",
+                nav_services: "Servicios", nav_team: "Equipo", nav_about: "Nosotros", nav_blog: "Blog", nav_contact: "Contacto",
                 crisis_btn: "Ayuda en Crisis",
                 hero_title: "Un espacio seguro para toda tu familia en Tijuana.",
-                hero_subtitle: "Somos un centro multidisciplinario dedicado al bienestar emocional de niños, adolescentes y padres. Entendemos el ritmo de la frontera. Aquí encontrarás soluciones prácticas, sin juicios y con total confidencialidad.",
+                hero_subtitle: "Somos un equipo multidisciplinario dedicado al bienestar emocional de niños, adolescentes y padres. Entendemos el ritmo de la frontera. Aquí encontrarás soluciones prácticas, sin juicios y con total confidencialidad.",
                 hero_cta: "Agendar Primera Sesión", hero_cta2: "Conoce Nuestros Servicios",
                 badge_cdmx: "Cédulas Profesionales CDMX", badge_confidential: "100% Confidencial", badge_team: "Equipo Multidisciplinario",
                 float_title: "+500 Familias Atendidas", float_sub: "en Tijuana y zona fronteriza",
@@ -586,7 +586,7 @@
                 pain_4_title: "Aislamiento y Pantallas", pain_4_desc: "Manejo saludable de redes sociales y videojuegos sin generar guerras en casa.",
                 pain_5_title: "Presión Académica y Futuro", pain_5_desc: "Herramientas para manejar el estrés de las calificaciones y la incertidumbre del futuro.",
                 pain_6_title: "Cambios de Humor Extremos", pain_6_desc: "Diferenciar la rebeldía normal de señales que requieren apoyo profesional temprano.",
-                services_title: "Nuestros Servicios", services_subtitle: "Un enfoque clínico, cálido y orientado a resultados tangibles para cada miembro de la familia.",
+                services_title: "El Método YOMI®", services_subtitle: "Un enfoque clínico, cálido y orientado a resultados tangibles para cada miembro de la familia.",
                 serv_1_title: "Terapia Familiar", serv_1_desc: "Mejoramos la comunicación y resolvemos conflictos en un entorno seguro, respetando la dinámica única de las familias tijuanenses.",
                 guarantee_1: "Primera sesión: Psicoeducación, no diagnóstico.",
                 serv_2_title: "Terapia Infantil", serv_2_desc: "Usamos juego y arte para que los niños expresen lo que no pueden decir con palabras, fortaleciendo su autoestima.",
@@ -594,11 +594,11 @@
                 serv_3_title: "Orientación a Padres", serv_3_desc: "Sesiones exclusivas para cuidadores. Aprende a establecer límites con amor y a manejar tu propio estrés parental.",
                 guarantee_3: "Horarios flexibles (incluyendo sábados).",
                 team_title: "Un equipo completo para cada necesidad",
-                team_p1: "No estás solo/a. En nuestro centro, hemos reunido a un grupo selecto de colegas especializados para ofrecer atención integral. Desde psicólogos infantiles hasta orientadores familiares, todos compartimos la misma misión: el bienestar de tu hogar.",
+                team_p1: "No estás solo/a. En YOMI, hemos reunido a un grupo selecto de colegas especializados para ofrecer atención integral. Desde psicólogos infantiles hasta orientadores familiares, todos compartimos la misma misión: el bienestar de tu hogar.",
                 team_p2: "Trabajamos de la mano, compartiendo casos (con tu consentimiento) para asegurar que cada miembro de tu familia reciba el apoyo exacto que necesita.",
                 stat_specialists: "Especialistas", stat_years: "Años de Experiencia", stat_commitment: "Compromiso",
                 about_title: "Nuestra Misión: Romper el estigma, sanar familias",
-                about_p1: "Fundado por la Dra. [Nombre], este centro nació de la necesidad de ofrecer un espacio donde las familias tijuanenses puedan recibir ayuda profesional sin sentirse juzgadas. Conocemos el tráfico de la garita, las largas jornadas y el miedo a 'qué dirán los vecinos'.",
+                about_p1: "YOMI nació de la necesidad de ofrecer un espacio donde las familias tijuanenses puedan recibir ayuda profesional sin sentirse juzgadas. Conocemos el tráfico de la garita, las largas jornadas y el miedo a 'qué dirán los vecinos'.",
                 about_p2: "Aquí no hay etiquetas. Solo ciencia, empatía y un equipo de profesionales comprometidos con que tu hijo/a duerma mejor, saque mejores calificaciones y tu casa vuelva a ser un lugar de paz.",
                 about_cta: "Conoce nuestro enfoque",
                 blog_title: "Recursos y Consejos", blog_subtitle: "Pequeños cambios que puedes aplicar hoy mismo en casa.",
@@ -611,10 +611,10 @@
                 wa_tooltip: "¡Hola! ¿En qué podemos ayudarte?"
             },
             en: {
-                nav_services: "Services", nav_team: "Our Team", nav_about: "About Us", nav_blog: "Blog", nav_contact: "Contact",
+                nav_services: "Services", nav_team: "Team", nav_about: "About", nav_blog: "Blog", nav_contact: "Contact",
                 crisis_btn: "Crisis Help",
                 hero_title: "A safe space for your entire family in Tijuana.",
-                hero_subtitle: "We are a multidisciplinary center dedicated to the emotional wellness of children, teens, and parents. We understand the pace of the border. Here you will find practical solutions, no judgment, and total confidentiality.",
+                hero_subtitle: "We are a multidisciplinary team dedicated to the emotional wellness of children, teens, and parents. We understand the pace of the border. Here you will find practical solutions, no judgment, and total confidentiality.",
                 hero_cta: "Schedule First Session", hero_cta2: "View Our Services",
                 badge_cdmx: "CDMX Professional Licenses", badge_confidential: "100% Confidential", badge_team: "Multidisciplinary Team",
                 float_title: "+500 Families Served", float_sub: "in Tijuana and border area",
@@ -626,7 +626,7 @@
                 pain_4_title: "Isolation & Screens", pain_4_desc: "Healthy management of social media and video games without starting wars at home.",
                 pain_5_title: "Academic Pressure & Future", pain_5_desc: "Tools to handle grade stress and uncertainty about the future.",
                 pain_6_title: "Extreme Mood Swings", pain_6_desc: "Differentiating normal rebellion from early signs requiring professional support.",
-                services_title: "Our Services", services_subtitle: "A clinical, warm, and results-oriented approach for every family member.",
+                services_title: "The YOMI Method®", services_subtitle: "A clinical, warm, and results-oriented approach for every family member.",
                 serv_1_title: "Family Therapy", serv_1_desc: "We improve communication and resolve conflicts in a safe environment, respecting the unique dynamics of Tijuana families.",
                 guarantee_1: "First session: Psychoeducation, not diagnosis.",
                 serv_2_title: "Child Therapy", serv_2_desc: "We use play and art so children can express what they cannot say with words, strengthening their self-esteem.",
@@ -634,11 +634,11 @@
                 serv_3_title: "Parental Guidance", serv_3_desc: "Exclusive sessions for caregivers. Learn to set loving boundaries and manage your own parental stress.",
                 guarantee_3: "Flexible hours (including Saturdays).",
                 team_title: "A complete team for every need",
-                team_p1: "You are not alone. In our center, we have gathered a select group of specialized colleagues to offer comprehensive care. From child psychologists to family counselors, we all share the same mission: the wellness of your home.",
+                team_p1: "You are not alone. At YOMI, we have gathered a select group of specialized colleagues to offer comprehensive care. From child psychologists to family counselors, we all share the same mission: the wellness of your home.",
                 team_p2: "We work hand in hand, sharing cases (with your consent) to ensure every member of your family receives the exact support they need.",
                 stat_specialists: "Specialists", stat_years: "Years of Experience", stat_commitment: "Commitment",
                 about_title: "Our Mission: Break the stigma, heal families",
-                about_p1: "Founded by Dr. [Name], this center was born from the need to offer a space where Tijuana families can receive professional help without feeling judged. We know the border crossing traffic, long work hours, and the fear of 'what will the neighbors say'.",
+                about_p1: "YOMI was born from the need to offer a space where Tijuana families can receive professional help without feeling judged. We know the border crossing traffic, long work hours, and the fear of 'what will the neighbors say'.",
                 about_p2: "There are no labels here. Only science, empathy, and a team of professionals committed to helping your child sleep better, get better grades, and making your home a place of peace again.",
                 about_cta: "Learn about our approach",
                 blog_title: "Resources & Tips", blog_subtitle: "Small changes you can apply at home today.",
@@ -684,7 +684,6 @@
             });
         });
 
-        // Scroll Reveal Animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
